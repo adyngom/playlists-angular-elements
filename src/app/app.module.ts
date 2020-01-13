@@ -1,16 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule, Injector } from "@angular/core";
 
-import { AppComponent } from './app.component';
+import { createCustomElement } from "@angular/elements";
+
+import { PlaylistsComponent } from "./playlists/playlists.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [PlaylistsComponent],
+  imports: [BrowserModule],
+  entryComponents: [PlaylistsComponent],
+  providers: []
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {}
+
+  ngDoBootstrap() {
+    const el = createCustomElement(PlaylistsComponent, {
+      injector: this.injector
+    });
+    customElements.define("play-lists", el);
+  }
+}

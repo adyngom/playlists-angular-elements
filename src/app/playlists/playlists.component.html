@@ -1,0 +1,127 @@
+<section class="container-fluid media-container" #containerRef>
+  <div class="video-box" id="video-box" #videoBoxRef>
+    <div class="box videoWrapper">
+      <iframe
+        id="video-player"
+        width="560"
+        height="315"
+        src=""
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay"
+        #videoPlayerRef
+      >
+      </iframe>
+    </div>
+  </div>
+  <div class="videos-list" id="videos-list" #videosListRef>
+    <div class="playlist-details">
+      <!-- <figure class="playlist-image">
+                <img src="js.gif" alt="" />
+            </figure> -->
+      <div class="playlist-meta">
+        <h3>{{ title }}</h3>
+      </div>
+    </div>
+    <ul class="chapters" id="chapters" #chaptersRef>
+      <li class="chapter-item">
+        <h3 class="chapter-header open">Action Movies</h3>
+        <ul class="episodes">
+          <li class="episode" data-type="youtube" data-episodeid="6orc_lHvJKY">
+            <article class="episode">
+              <div class="episode-details">
+                <h4>Gemini Man</h4>
+                <small>
+                  Who will save you from yourself? From visionary director Ang
+                  Lee, watch the official trailer for Gemini Man, starring Will
+                  Smith.
+                </small>
+              </div>
+            </article>
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="KrEWXL9ClGw">
+            <article class="episode">
+              <div class="episode-details">
+                <h4>Adding & removing items</h4>
+                <small>
+                  3min
+                </small>
+              </div>
+            </article>
+          </li>
+          <li class="episode" data-type="vimeo" data-episodeid="185808340">
+            <article class="episode">
+              <div class="episode-details">
+                <h4>Looping over</h4>
+                <small>
+                  5min
+                </small>
+              </div>
+            </article>
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            <article class="episode">
+              <div class="episode-details">
+                <h4>Cloning and modifying</h4>
+                <small>
+                  8min
+                </small>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </li>
+      <li class="chapter-item">
+        <h3 class="chapter-header">chapter 2</h3>
+        <ul class="episodes">
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 1
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 2
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 3
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 4
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 5
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 6
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 7
+          </li>
+        </ul>
+      </li>
+      <li class="chapter-item">
+        <h3 class="chapter-header">chapter 3</h3>
+        <ul class="episodes">
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 1
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 2
+          </li>
+        </ul>
+      </li>
+      <li class="chapter-item">
+        <h3 class="chapter-header">chapter 4</h3>
+        <ul class="episodes">
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 1
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 2
+          </li>
+          <li class="episode" data-type="youtube" data-episodeid="">
+            episode 3
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
