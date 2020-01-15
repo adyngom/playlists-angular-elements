@@ -8,15 +8,37 @@ import {
   ViewChild
 } from "@angular/core";
 
+interface Item {
+  title: string;
+  summary?: string;
+  type: "youtube" | "vimeo";
+  videoId: string;
+  length?: string;
+}
+interface PlaylistEntry {
+  title: string;
+  dateCreated?: string;
+  items: Item[];
+}
+interface Playlist {
+  [Key: string]: PlaylistEntry;
+}
+interface Payload {
+  order: string[];
+  playlists: Playlist;
+}
+
 @Component({
-  selector: "app-playlists",
   templateUrl: "./playlists.component.html",
   styleUrls: ["./playlists.component.css"],
-  encapsulation: ViewEncapsulation.Native
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class PlaylistsComponent implements OnInit, AfterViewInit {
   @Input()
   title = "Upcoming must watch";
+
+  @Input()
+  data: Payload | string;
 
   listStyles = {};
   episodes = [];
@@ -28,7 +50,12 @@ export class PlaylistsComponent implements OnInit, AfterViewInit {
   @ViewChild("videosListRef", { static: false }) videosListRef: ElementRef;
   @ViewChild("chaptersRef", { static: false }) chaptersRef: ElementRef;
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (typeof this.data === "string") {
+      this.data = JSON.parse(this.data);
+      console.log(this.data);
+    }
+  }
 
   ngAfterViewInit() {
     this.setVideosListStyles();
@@ -39,9 +66,11 @@ export class PlaylistsComponent implements OnInit, AfterViewInit {
     this.episodes = [
       ...this.containerRef.nativeElement.querySelectorAll(".episodes")
     ];
-
-    this.switchVideo("KrEWXL9ClGw");
+    const firstKey = this.data.order[0];
+    this.switchVideo(this.data.playlists[firstKey].items[0].videoId);
     this.setEpisodesHeight();
+
+    this.containerRef.nativeElement.style.visibility = "visible";
 
     this.chaptersRef.nativeElement.addEventListener("click", e => {
       e.preventDefault();

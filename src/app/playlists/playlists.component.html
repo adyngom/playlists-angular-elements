@@ -24,54 +24,62 @@
       </div>
     </div>
     <ul class="chapters" id="chapters" #chaptersRef>
-      <li class="chapter-item">
-        <h3 class="chapter-header open">Action Movies</h3>
-        <ul class="episodes">
-          <li class="episode" data-type="youtube" data-episodeid="6orc_lHvJKY">
-            <article class="episode">
-              <div class="episode-details">
-                <h4>Gemini Man</h4>
-                <small>
-                  Who will save you from yourself? From visionary director Ang
-                  Lee, watch the official trailer for Gemini Man, starring Will
-                  Smith.
-                </small>
-              </div>
-            </article>
-          </li>
-          <li class="episode" data-type="youtube" data-episodeid="KrEWXL9ClGw">
-            <article class="episode">
-              <div class="episode-details">
-                <h4>Adding & removing items</h4>
-                <small>
-                  3min
-                </small>
-              </div>
-            </article>
-          </li>
-          <li class="episode" data-type="vimeo" data-episodeid="185808340">
-            <article class="episode">
-              <div class="episode-details">
-                <h4>Looping over</h4>
-                <small>
-                  5min
-                </small>
-              </div>
-            </article>
-          </li>
-          <li class="episode" data-type="youtube" data-episodeid="">
-            <article class="episode">
-              <div class="episode-details">
-                <h4>Cloning and modifying</h4>
-                <small>
-                  8min
-                </small>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </li>
-      <li class="chapter-item">
+      <ng-template ngFor let-list [ngForOf]="data.order" let-i="index">
+        <li class="chapter-item">
+          <h3 class="chapter-header open">{{ data.playlists[list].title }}</h3>
+          <ul class="episodes">
+            <li
+              class="episode"
+              [attr.data-episodeid]="episode.videoId"
+              [attr.data-type]="episode.type"
+              *ngFor="let episode of data.playlists[list].items"
+            >
+              <article class="episode">
+                <div class="episode-details">
+                  <h4>{{ episode.title }}</h4>
+                  <!-- <small class="episode-summary"> {{ episode.summary }}</small> -->
+                  <small>{{ episode.length }}</small>
+                </div>
+              </article>
+            </li>
+            <li
+              class="episode"
+              data-type="youtube"
+              data-episodeid="KrEWXL9ClGw"
+            >
+              <article class="episode">
+                <div class="episode-details">
+                  <h4>Adding & removing items</h4>
+                  <small>
+                    3min
+                  </small>
+                </div>
+              </article>
+            </li>
+            <li class="episode" data-type="vimeo" data-episodeid="185808340">
+              <article class="episode">
+                <div class="episode-details">
+                  <h4>Looping over</h4>
+                  <small>
+                    5min
+                  </small>
+                </div>
+              </article>
+            </li>
+            <li class="episode" data-type="youtube" data-episodeid="">
+              <article class="episode">
+                <div class="episode-details">
+                  <h4>Cloning and modifying</h4>
+                  <small>
+                    8min
+                  </small>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </li>
+      </ng-template>
+      <!-- <li class="chapter-item">
         <h3 class="chapter-header">chapter 2</h3>
         <ul class="episodes">
           <li class="episode" data-type="youtube" data-episodeid="">
@@ -121,7 +129,7 @@
             episode 3
           </li>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </div>
 </section>
