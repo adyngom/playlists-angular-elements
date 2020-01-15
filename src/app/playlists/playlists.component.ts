@@ -1,6 +1,7 @@
 import {
   Component,
   OnInit,
+  OnDestroy,
   ViewEncapsulation,
   Input,
   AfterViewInit,
@@ -33,12 +34,14 @@ interface Payload {
   styleUrls: ["./playlists.component.css"],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class PlaylistsComponent implements OnInit, AfterViewInit {
+export class PlaylistsComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input()
   title = "Upcoming must watch";
 
   @Input()
   data: Payload | string;
+
+  library: Payload;
 
   listStyles = {};
   episodes = [];
@@ -52,8 +55,7 @@ export class PlaylistsComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     if (typeof this.data === "string") {
-      this.data = JSON.parse(this.data);
-      console.log(this.data);
+      this.library = JSON.parse(this.data);
     }
   }
 
@@ -66,31 +68,25 @@ export class PlaylistsComponent implements OnInit, AfterViewInit {
     this.episodes = [
       ...this.containerRef.nativeElement.querySelectorAll(".episodes")
     ];
-    const firstKey = this.data.order[0];
-    this.switchVideo(this.data.playlists[firstKey].items[0].videoId);
+    const firstKey = this.library.order[0];
+    this.switchVideo(this.library.playlists[firstKey].items[0].videoId);
     this.setEpisodesHeight();
 
     this.containerRef.nativeElement.style.visibility = "visible";
 
-    this.chaptersRef.nativeElement.addEventListener("click", e => {
-      e.preventDefault();
-      const elem = e.target;
+    this.chaptersRef.nativeElement.addEventListener(
+      "click",
+      this.handleChaptersChaptersClick,
+      false
+    );
+  }
 
-      if (elem.classList.contains("chapter-header")) {
-        const _episodes = elem.nextElementSibling;
-        this.episodes.forEach(ep => (ep.style.height = "0px"));
-        this.headers.forEach(header => header.classList.remove("open"));
-        elem.classList.toggle("open");
-        _episodes.style.height = _episodes.getAttribute("data-height") + "px";
-      }
-
-      if (elem.classList.contains("episode")) {
-        const { type, episodeid: id } = elem.dataset;
-        if (!!id) {
-          this.switchVideo(id, type);
-        }
-      }
-    });
+  ngOnDestroy() {
+    this.chaptersRef.nativeElement.removeEventListener(
+      "click",
+      this.handleChaptersChaptersClick,
+      false
+    );
   }
 
   private setVideosListStyles(): void {
@@ -122,5 +118,25 @@ export class PlaylistsComponent implements OnInit, AfterViewInit {
     const url =
       type === "vimeo" ? this.getVimeoUrl(id) : this.getYouTubeUrl(id);
     this.videoPlayerRef.nativeElement.setAttribute("src", url);
+  };
+
+  private handleChaptersChaptersClick = (e: any): void => {
+    e.preventDefault();
+    const elem = e.target;
+
+    if (elem.classList.contains("chapter-header")) {
+      const _episodes = elem.nextElementSibling;
+      this.episodes.forEach(ep => (ep.style.height = "0px"));
+      this.headers.forEach(header => header.classList.remove("open"));
+      elem.classList.toggle("open");
+      _episodes.style.height = _episodes.getAttribute("data-height") + "px";
+    }
+
+    if (elem.classList.contains("episode")) {
+      const { type, episodeid: id } = elem.dataset;
+      if (!!id) {
+        this.switchVideo(id, type);
+      }
+    }
   };
 }

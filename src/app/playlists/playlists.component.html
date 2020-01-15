@@ -24,15 +24,17 @@
       </div>
     </div>
     <ul class="chapters" id="chapters" #chaptersRef>
-      <ng-template ngFor let-list [ngForOf]="data.order" let-i="index">
+      <ng-template ngFor let-list [ngForOf]="library.order" let-i="index">
         <li class="chapter-item">
-          <h3 class="chapter-header open">{{ data.playlists[list].title }}</h3>
+          <h3 class="chapter-header open">
+            {{ library.playlists[list].title }}
+          </h3>
           <ul class="episodes">
             <li
               class="episode"
               [attr.data-episodeid]="episode.videoId"
               [attr.data-type]="episode.type"
-              *ngFor="let episode of data.playlists[list].items"
+              *ngFor="let episode of library.playlists[list].items"
             >
               <article class="episode">
                 <div class="episode-details">
