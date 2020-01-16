@@ -1,6 +1,7 @@
 <div id="app"></div>
+
 <script type="text/javascript">
-  // const Playlist = document.getElementsByTagName("play-lists")[0];
+  // looks familiar outside of Angular :)
   const App = document.getElementById("app");
   const payload = {
     order: ["0001", "0002", "0003"],
@@ -54,10 +55,12 @@
     }
   };
   const Playlist = document.createElement("play-lists");
-  //<play-lists title="Personal Bookmarks - 2019 Best of the Best"></play-lists>
-  Playlist.setAttribute("title", "Personal Bookmarks 2019");
+
+  Playlist.setAttribute("title", "Joye in Angular");
   Playlist.setAttribute("data", JSON.stringify(payload));
+
   const fragment = new DocumentFragment();
   fragment.appendChild(Playlist);
+
   App.appendChild(fragment);
 </script>

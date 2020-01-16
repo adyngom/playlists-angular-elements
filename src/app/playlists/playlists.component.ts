@@ -30,6 +30,7 @@ interface Payload {
 }
 
 @Component({
+  selector: "app-playlists",
   templateUrl: "./playlists.component.html",
   styleUrls: ["./playlists.component.css"],
   encapsulation: ViewEncapsulation.ShadowDom
