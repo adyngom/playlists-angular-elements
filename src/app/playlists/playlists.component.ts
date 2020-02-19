@@ -35,7 +35,10 @@ interface Payload {
   styleUrls: ["./playlists.component.css"],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class PlaylistsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class PlaylistsComponent implements 
+  OnInit, 
+  AfterViewInit, 
+  OnDestroy {
   @Input()
   title = "Upcoming must watch";
 
@@ -48,11 +51,11 @@ export class PlaylistsComponent implements OnInit, AfterViewInit, OnDestroy {
   episodes = [];
   headers = [];
 
-  @ViewChild("containerRef", { static: false }) containerRef: ElementRef;
-  @ViewChild("videoBoxRef", { static: false }) videoBoxRef: ElementRef;
-  @ViewChild("videoPlayerRef", { static: false }) videoPlayerRef: ElementRef;
-  @ViewChild("videosListRef", { static: false }) videosListRef: ElementRef;
-  @ViewChild("chaptersRef", { static: false }) chaptersRef: ElementRef;
+  @ViewChild("containerRef") containerRef: ElementRef;
+  @ViewChild("videoBoxRef") videoBoxRef: ElementRef;
+  @ViewChild("videoPlayerRef") videoPlayerRef: ElementRef;
+  @ViewChild("videosListRef") videosListRef: ElementRef;
+  @ViewChild("chaptersRef") chaptersRef: ElementRef;
 
   ngOnInit() {
     if (typeof this.data === "string") {

@@ -1,0 +1,54 @@
+{
+    "library": {
+        "order": ["0001", "0002", "0003"],
+        "playlists": {
+          "0001": {
+            "title": "Two thumbs way up!!",
+            "dateCreated": "",
+            "items": [
+              {
+                "title": "Malika Warrior Queen Trailer",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "2N80qcVvzUU",
+                "length": "1:52"
+              }
+            ]
+          },
+          "0002": {
+            "title": "NG Conf Best of",
+            "dateCreated": "",
+            "items": [
+              {
+                "title": "A Deep Look At Angular Elements | Manfred Steyer",
+                "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
+                "type": "youtube",
+                "videoId": "_QU0mpyF7bQ",
+                "length": "1:17:41"
+              },
+              {
+                "title": "These ARE the Angular tips you are looking for | John Papa",
+                "summary": "A long time ago in a galaxy far, far away … as a Mandalorian bounty hunter, you honed your Angular skills with the Tour of Heroes. You’re searching for the next steps to enhancing your Angular apps through improving the user experience, maintainability, and scalability. Look no further!",
+                "type": "youtube",
+                "videoId": "2ZFgcTOcnUg",
+                "length": "25:04"
+              }
+            ]
+          },
+          "0003": {
+            "title": "Action Movies",
+            "dateCreated": "",
+            "items": [
+              {
+                "title": "A Deep Look At Angular Elements | Manfred Steyer",
+                "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
+                "type": "youtube",
+                "videoId": "_QU0mpyF7bQ",
+                "length": "1:17:41"
+              }
+            ]
+          }
+        }
+      }
+      
+}
