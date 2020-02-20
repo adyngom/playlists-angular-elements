@@ -11,10 +11,12 @@ import { PlaylistsComponent } from "./playlists/playlists.component";
 })
 export class AppModule {
   constructor(private injector: Injector) {}
+
   ngDoBootstrap() {
     const el = createCustomElement(PlaylistsComponent, {
       injector: this.injector
     });
     customElements.define("play-lists", el);
   }
+  
 }

@@ -1,54 +1,206 @@
 {
-    "library": {
-        "order": ["0001", "0002", "0003"],
-        "playlists": {
-          "0001": {
-            "title": "Two thumbs way up!!",
-            "dateCreated": "",
-            "items": [
+  "library": {
+      "order": ["0001", "0002", "0003", "0004"],
+      "playlists": {
+        "0001": {
+          "title": "Two thumbs way up!!",
+          "dateCreated": "",
+          "items": [
+            {
+              "title": "Malika Warrior Queen Trailer",
+              "summary": "",
+              "type": "youtube",
+              "videoId": "2N80qcVvzUU",
+              "length": "1:52"
+            },
+            {
+              "title": "Wonder Woman",
+              "summary": "",
+              "type": "youtube",
+              "videoId": "1Q8fG0TtVAY",
+              "length": "2:31"
+            },
+            {
+              "title": "Black Widow",
+              "summary": "",
+              "type": "youtube",
+              "videoId": "RxAtuMu_ph4",
+              "length": "2:31"
+            }
+          ]
+        },
+        "0002": {
+          "title": "Avengers!! Nuff said",
+          "dateCreated": "",
+          "items": [
               {
-                "title": "Malika Warrior Queen Trailer",
+                "title": "Captain America - The First Avenger",
                 "summary": "",
                 "type": "youtube",
-                "videoId": "2N80qcVvzUU",
-                "length": "1:52"
-              }
-            ]
-          },
-          "0002": {
-            "title": "NG Conf Best of",
-            "dateCreated": "",
-            "items": [
-              {
-                "title": "A Deep Look At Angular Elements | Manfred Steyer",
-                "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
-                "type": "youtube",
-                "videoId": "_QU0mpyF7bQ",
-                "length": "1:17:41"
+                "videoId": "W4DlMggBPvc"
               },
               {
-                "title": "These ARE the Angular tips you are looking for | John Papa",
-                "summary": "A long time ago in a galaxy far, far away … as a Mandalorian bounty hunter, you honed your Angular skills with the Tour of Heroes. You’re searching for the next steps to enhancing your Angular apps through improving the user experience, maintainability, and scalability. Look no further!",
+                "title": "Captain Marvel",
+                "summary": "",
                 "type": "youtube",
-                "videoId": "2ZFgcTOcnUg",
-                "length": "25:04"
-              }
-            ]
-          },
-          "0003": {
-            "title": "Action Movies",
-            "dateCreated": "",
-            "items": [
+                "videoId": "0LHxvxdRnYc"
+              },
               {
-                "title": "A Deep Look At Angular Elements | Manfred Steyer",
-                "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
+                "title": "Iron Man",
+                "summary": "",
                 "type": "youtube",
-                "videoId": "_QU0mpyF7bQ",
-                "length": "1:17:41"
+                "videoId": "sTQZj2B5vNw"
+              },
+              {
+                "title": "Iron Man 2",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "BoohRoVA9WQ"
+              },
+              {
+                "title": "The Incredible Hulk",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "H3vQbMSVlDw"
+              },
+              {
+                "title": "Thor",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "vJUDu40Z_RY"
+              },
+              {
+                "title": "Avengers Assemble",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "NPoHPNeU9fc"
+              },
+              {
+                "title": "Iron Man 3",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "oYSD2VQagc4"
+              },
+              {
+                "title": "Thor The Dark World",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "NhEHo46x2w8"
+              },
+              {
+                "title": "Captain America The Winter Soldier",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "7SlILk2WMTI"
+              },
+              {
+                "title": "Guardian of The Galaxy",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "d96cjJhvlMA"
+              },
+              {
+                "title": "Guardian of The Galaxy Vol 2",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "2cv2ueYnKjg"
+              },
+              {
+                "title": "Avengers Age of Ultron",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "tmeOjFno6Do"
+              },
+              {
+                "title": "Ant Man",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "IEVE3KSKQ0o"
+              },
+              {
+                "title": "Captain America Civil War",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "1L3c17AmCZw"
+              },
+              {
+                "title": "Doctor Strange",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "MWRUNTLisPo"
+              },
+              {
+                "title": "Black Panther",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "xjDjIWPwcPU"
+              },
+              {
+                "title": "Spider-Man Homecoming",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "DiTECkLZ8HM"
+              },
+              {
+                "title": "Thor Ragnarok",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "ue80QwXMRHg"
+              },
+              {
+                "title": "Ant Man and the Wasp",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "UUkn-enk2RU"
+              },
+              {
+                "title": "Avengers Infinity War",
+                "summary": "",
+                "type": "youtube",
+                "videoId": "6ZfuNTqbHE8"
+              },
+              {
+                  "title": "Avengers End Game - Whatever it takes...",
+                  "summary": "",
+                  "type": "youtube",
+                  "videoId": "TcMBFSGVi1c"
               }
-            ]
-          }
+          ]
+        },
+        "0003": {
+          "title": "NG Conf Best of",
+          "dateCreated": "",
+          "items": [
+            {
+              "title": "A Deep Look At Angular Elements | Manfred Steyer",
+              "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
+              "type": "youtube",
+              "videoId": "_QU0mpyF7bQ",
+              "length": "1:17:41"
+            },
+            {
+              "title": "These ARE the Angular tips you are looking for | John Papa",
+              "summary": "A long time ago in a galaxy far, far away … as a Mandalorian bounty hunter, you honed your Angular skills with the Tour of Heroes. You’re searching for the next steps to enhancing your Angular apps through improving the user experience, maintainability, and scalability. Look no further!",
+              "type": "youtube",
+              "videoId": "2ZFgcTOcnUg",
+              "length": "25:04"
+            }
+          ]
+        },
+        "0004": {
+          "title": "Action Movies",
+          "dateCreated": "",
+          "items": [
+            {
+              "title": "A Deep Look At Angular Elements | Manfred Steyer",
+              "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
+              "type": "youtube",
+              "videoId": "_QU0mpyF7bQ",
+              "length": "1:17:41"
+            }
+          ]
         }
       }
-      
+    }
+    
 }

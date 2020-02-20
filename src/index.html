@@ -19,7 +19,7 @@
   const Playlist = document.createElement("play-lists");
   
   fetchUrl('http://localhost:5000/library').then( data => {
-    Playlist.setAttribute("title", "Joye in Angular");
+    Playlist.setAttribute("title", "Yvonne rocked it yesterday in Angular");
     Playlist.setAttribute("data", JSON.stringify(data));
 
     const fragment = new DocumentFragment();
