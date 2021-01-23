@@ -19,17 +19,18 @@ p {
 
 .media-container {
   font-family: "Cambay", serif;
-  padding: 15px;
   display: flex;
   grid-template-columns: 3fr 1fr;
-  grid-column-gap: 15px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .video-box {
-  background-color: #8797dc;
-  flex: 3.5;
-  margin-right: 15px;
+  background-color: #000;
+  flex: 4;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 0 2px;
 }
 
 .box {
@@ -40,7 +41,13 @@ p {
 .videos-list {
   background-color: #19202a;
   color: #fff;
-  flex: 1.5;
+  flex: 1;
+  counter-reset: chapter;
+}
+
+.videos-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .chapters {
@@ -65,6 +72,10 @@ p {
   cursor: pointer;
   border-bottom: 2px solid #141920;
 }
+.chapter-header::before {
+  counter-increment: chapter;
+  content: counter(chapter)" . "
+}
 
 .chapter-item {
   padding-left: 0;
@@ -73,8 +84,10 @@ p {
 .episodes {
   flex-direction: column;
   overflow: hidden;
-  height: 0;
-  transition: all 500ms ease-in-out;
+  height: 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1000ms ease-in-out;
   list-style: none;
   background-color: transparent;
   color: #949599;
@@ -92,6 +105,8 @@ p {
 
 .open + .episodes {
   flex: 1;
+  height: auto;
+  max-height: 100vh;
 }
 
 .episode {
@@ -115,13 +130,18 @@ grid-column-gap: 12px; */
 
 .episode-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   color: #75787f;
+  padding: 4px 8px 4px 4px;
 }
 
 .episode-details h4 {
   color: #ffffff;
+  flex: 1;
+  padding-right: 4px;
+  line-height: 2;
 }
 
 .episode > * {
@@ -155,7 +175,6 @@ grid-column-gap: 12px; */
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
-  padding-top: 25px;
   height: 0;
 }
 

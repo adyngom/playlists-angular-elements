@@ -172,6 +172,13 @@
           "dateCreated": "",
           "items": [
             {
+              "title": "Moving Zeroes Code Challenge",
+              "summary": "",
+              "type":"youtube",
+              "videoId":"CC8edj19Uiw",
+              "length": "8:52"
+            },
+            {
               "title": "A Deep Look At Angular Elements | Manfred Steyer",
               "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
               "type": "youtube",

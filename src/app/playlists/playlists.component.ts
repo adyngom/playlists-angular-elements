@@ -74,7 +74,7 @@ export class PlaylistsComponent implements
     ];
     const firstKey = this.library.order[0];
     this.switchVideo(this.library.playlists[firstKey].items[0].videoId);
-    this.setEpisodesHeight();
+    //this.setEpisodesHeight();
 
     this.containerRef.nativeElement.style.visibility = "visible";
 
@@ -95,8 +95,9 @@ export class PlaylistsComponent implements
 
   private setVideosListStyles(): void {
     this.listStyles = {
-      height: `${this.videoPlayerRef.nativeElement.scrollHeight}px`,
-      overflow: "scroll"
+      height: '100vh',
+      overflow: "scroll",
+      boxSizing: "border-box"
     };
     Object.assign(this.videosListRef.nativeElement.style, this.listStyles);
   }
@@ -129,11 +130,11 @@ export class PlaylistsComponent implements
     const elem = e.target;
 
     if (elem.classList.contains("chapter-header")) {
-      const _episodes = elem.nextElementSibling;
-      this.episodes.forEach(ep => (ep.style.height = "0px"));
-      this.headers.forEach(header => header.classList.remove("open"));
+      // const _episodes = elem.nextElementSibling;
+      // this.episodes.forEach(ep => (ep.style.height = "0px"));
+      //this.headers.forEach(header => header.classList.remove("open"));
       elem.classList.toggle("open");
-      _episodes.style.height = _episodes.getAttribute("data-height") + "px";
+      //_episodes.style.height = _episodes.getAttribute("data-height") + "px";
     }
 
     if (elem.classList.contains("episode")) {
