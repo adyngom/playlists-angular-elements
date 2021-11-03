@@ -6,7 +6,7 @@
   // looks familiar outside of Angular :)
   const App = document.getElementById("app");
 
-  const fetchUrl = async (url) => {
+  const fetchUrl = async url => {
     try {
       const payload = await fetch(url);
       const data = payload.json();
@@ -14,12 +14,12 @@
     } catch (e) {
       throw new Error(e.message || "Something went wrong");
     }
-  }
+  };
 
   const Playlist = document.createElement("play-lists");
-  
-  fetchUrl('http://localhost:5000/library').then( data => {
-    Playlist.setAttribute("title", "Yvonne rocked it yesterday in Angular");
+
+  fetchUrl("http://localhost:5000/library").then(data => {
+    Playlist.setAttribute("title", "Angular HTML5 Video Player");
     Playlist.setAttribute("data", JSON.stringify(data));
 
     const fragment = new DocumentFragment();
@@ -27,5 +27,4 @@
     App.innerHTML = "";
     App.appendChild(fragment);
   });
-  
 </script>
