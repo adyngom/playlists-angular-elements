@@ -1,19 +1,5 @@
 <section class="container-fluid media-container" #containerRef>
-  <div class="video-box" id="video-box" #videoBoxRef>
-    <div class="box videoWrapper">
-      <iframe
-        id="video-player"
-        width="560"
-        height="315"
-        src=""
-        frameborder="0"
-        allowfullscreen
-        allow="autoplay"
-        #videoPlayerRef
-      >
-      </iframe>
-    </div>
-  </div>
+  
   <div class="videos-list" id="videos-list" #videosListRef>
     <div class="playlist-details">
       <!-- <figure class="playlist-image">
@@ -21,6 +7,7 @@
             </figure> -->
       <div class="playlist-meta">
         <h3>{{ title }}</h3>
+        <h4>by Ady Ngom</h4>
       </div>
     </div>
     <ul class="chapters" id="chapters" #chaptersRef>
@@ -42,7 +29,7 @@
                 </div>
                 <div class="episode-details">
                   <h4>{{ episode.title }}</h4>
-                  <small>{{ episode.length }}</small>
+                  <small>{{ episode.length || '0:00'}}</small>
                 </div>
               </article>
             </li>
@@ -50,5 +37,20 @@
         </li>
       </ng-template>
     </ul>
+  </div>
+  <div class="video-box" id="video-box" #videoBoxRef>
+    <div class="box videoWrapper">
+      <iframe
+        id="video-player"
+        width="560"
+        height="315"
+        src=""
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay"
+        #videoPlayerRef
+      >
+      </iframe>
+    </div>
   </div>
 </section>
