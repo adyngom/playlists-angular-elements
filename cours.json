@@ -1,11 +1,17 @@
 {
-  "library": {
-    "order": ["0001", "0002", "0003", "0004"],
-    "playlists": {
+  "course": {
+    "id": "1",
+    "name": "Introduction to Computer Science",
+    "description": "This course introduces students to the basic concepts of computer science.",
+    "category": "Computer Science",
+    "category_id": "1",
+    "level": "Beginner",
+    "sequence": ["0001", "0002", "0003", "0004"],
+    "chapters": {
       "0001": {
         "title": "Two thumbs way up!!",
         "dateCreated": "",
-        "items": [
+        "lessons": [
           {
             "title": "Malika Warrior Queen Trailer",
             "summary": "",
@@ -41,7 +47,7 @@
       "0002": {
         "title": "Avengers!! Nuff said",
         "dateCreated": "",
-        "items": [
+        "lessons": [
           {
             "title": "Captain America - The First Avenger",
             "summary": "",
@@ -245,7 +251,7 @@
       "0003": {
         "title": "NG Conf Best of",
         "dateCreated": "",
-        "items": [
+        "lessons": [
           {
             "title": "A Deep Look At Angular Elements | Manfred Steyer",
             "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",
@@ -271,7 +277,7 @@
       "0004": {
         "title": "Action Movies",
         "dateCreated": "",
-        "items": [
+        "lessons": [
           {
             "title": "A Deep Look At Angular Elements | Manfred Steyer",
             "summary": "New web technologies and frameworks are being released all the time. This is exciting – and overwhelming. Framework-independent web components provide a remedy for this dilemma!",

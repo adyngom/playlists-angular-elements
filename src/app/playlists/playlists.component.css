@@ -85,7 +85,7 @@ p {
 .episodes li {
   padding: 12px 0;
   background-color: #242b33;
-  padding-left: 48px;
+  padding-left: 24px;
   margin-bottom: 1px;
   cursor: pointer;
 }
@@ -96,13 +96,13 @@ p {
 
 .episode {
   display: flex;
+  flex: 1;
 }
 
 .episode-thumb {
-  margin: 0;
+  margin-right: 13px;
   width: 100px;
   height: 67px;
-  padding: 13px 0;
 }
 
 .episode-thumb img {
@@ -114,13 +114,17 @@ p {
 .episode-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   color: #75787f;
   flex: 1;
 }
 
 .episode-details h4 {
   color: #ffffff;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 98%;
 }
 
 .episode > * {
