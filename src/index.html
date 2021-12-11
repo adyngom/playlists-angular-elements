@@ -19,7 +19,7 @@
   const Playlist = document.createElement("play-lists");
 
   fetchUrl('http://localhost:5000/library').then(data => {
-    Playlist.setAttribute("title", "React Masterclass 2021");
+    Playlist.setAttribute("title", "Angular Playlists App");
     Playlist.setAttribute("data", JSON.stringify(data));
 
     const fragment = new DocumentFragment();
