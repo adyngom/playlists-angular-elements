@@ -4,10 +4,9 @@ import { createCustomElement } from "@angular/elements";
 import { PlaylistsComponent } from "./playlists/playlists.component";
 
 @NgModule({
-  declarations: [PlaylistsComponent],
-  imports: [BrowserModule],
-  entryComponents: [PlaylistsComponent],
-  providers: []
+    declarations: [PlaylistsComponent],
+    imports: [BrowserModule],
+    providers: []
 })
 export class AppModule {
   constructor(private injector: Injector) {}
